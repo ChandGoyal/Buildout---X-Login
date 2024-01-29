@@ -25,7 +25,7 @@ function App() {
       {isSubmitted ? (
         <p>Welcome, {userName}!</p>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} data-testid="login-form">
           {error && <p className="error">{error}</p>}
           <div>
             <label htmlFor="username">
