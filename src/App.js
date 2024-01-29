@@ -25,35 +25,31 @@ function App() {
       {isSubmitted ? (
         <p>Welcome, {userName}!</p>
       ) : (
-        <form onSubmit={handleSubmit} data-testid="login-form">
+        <form onSubmit={handleSubmit}>
           {error && <p className="error">{error}</p>}
           <div>
-            <label htmlFor="username">
-              Username:
-              <input
-                type="text"
-                placeholder="username"
-                id="username"
-                name="username"
-                value={userName}
-                onChange={(event) => setUserName(event.target.value)}
-                required
-              ></input>
-            </label>
+            <label htmlFor="username">Username:</label>
+            <input
+              type="text"
+              placeholder="username"
+              id="username"
+              name="username"
+              value={userName}
+              onChange={(event) => setUserName(event.target.value)}
+              required
+            ></input>
           </div>
           <div>
-            <label htmlFor="password">
-              Password:
-              <input
-                type="password"
-                placeholder="password"
-                id="password"
-                name="password"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-                required
-              ></input>
-            </label>
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              placeholder="password"
+              id="password"
+              name="password"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+              required
+            ></input>
           </div>
           <div>
             <button type="submit">Submit</button>
